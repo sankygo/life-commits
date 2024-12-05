@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lint": "next lint",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -17,6 +18,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "lucide-react": "^0.462.0",
@@ -30,7 +32,6 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^9.16.0",
     "eslint-config-next": "^15.0.3",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.1",
