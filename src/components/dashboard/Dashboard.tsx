@@ -1,6 +1,7 @@
 // src/components/dashboard/Dashboard.tsx
 import WalletBalance from './WalletBalance';
 import WeeklyStatus from './WeeklyStatus';
+import ActivityGraph from './ActivityGraph';
 import TransactionModal from './TransactionModal';
 import { useState, useEffect } from 'react';
 import { format, parseISO } from 'date-fns';
@@ -76,6 +77,7 @@ const Dashboard = () => {
         categories={categories}
         onTransaction={handleTransaction} 
       />
+      <ActivityGraph />
       
       {isModalOpen && (
         <TransactionModal

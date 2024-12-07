@@ -56,6 +56,9 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      gridTemplateColumns: {
+        '52': 'repeat(52, minmax(0, 1fr))',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
