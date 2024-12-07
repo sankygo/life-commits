@@ -6,15 +6,26 @@ import { useState, useEffect } from 'react';
 import { format, parseISO } from 'date-fns';
 import { walletStore } from '@/store/walletStore';
 
+
+interface WalletStats {
+  totalBalance: number;
+  weeklyChange: number;
+  startDate: string;
+  breakdown: {
+    totalEarnings: number;
+    negativeSpends: number;
+  };
+}
+
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [transactionType, setTransactionType] = useState<'earn' | 'spend' | null>(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [stats, setStats] = useState(null);
-  const [categories, setCategories] = useState(null);
+  const [stats, setStats] = useState<WalletStats | null>(null);
+  const [categories, setCategories] = useState<any>(null);
 
   useEffect(() => {
-    console.log('Dashboard loading categories:', walletStore.getCategories());
+    //console.log('Dashboard loading categories:', walletStore.getCategories());
     setCategories(walletStore.getCategories());
     setStats(walletStore.getWalletStats());
   }, []);
